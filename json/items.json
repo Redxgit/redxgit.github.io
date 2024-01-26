@@ -1,26 +1,20 @@
 [
     {
         "name": "Project 1",
-        "description": "This is where you put description about your projects.",
+        "description": "Deep neural networks.",
         "image": "images/image1.jpg",
         "link": "https://google.com"
 	},
     {
         "name": "Project 2",
-        "description": "This is where you put description about your projects.",
+        "description": "Profine maybe.",
         "image": "images/image2.jpg",
         "link": "https://google.com"
 	},
     {
         "name": "Project 3",
-        "description": "This is where you put description about your projects.",
+        "description": "Massira I guess.",
         "image": "images/image3.jpg",
         "link": "https://google.com"
-	},
-    {
-        "name": "Project 4",
-        "description": "This is where you put description about your projects.",
-        "image": "images/image4.jpg",
-        "link": "https://google.com"
-	}
+	}    
 ]

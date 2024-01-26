@@ -20,18 +20,13 @@
 
     <script>
         function toggleSection() {
-            var elements = document.getElementsByClassName('waves-effect waves-grey btn-flat');
+            const toggleButton = document.getElementById('contactButton').getElementsByTagName('p')[0];
             // Loop through the elements and toggle their visibility
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                if (element.style.display === 'none') {
-                    // If the element is hidden or display property is not set, make it visible
-                    element.style.display = 'block'; // You can change 'block' to any other display value as needed
-                } else {
-                    // If the element is visible, none it
-                    element.style.display = 'none';
-                }
-            };
+            if (toggleButton.innerHTML.includes('PUBLICATIONS')) {
+                toggleButton.innerHTML = 'PORTFOLIO';
+            } else {
+                toggleButton.innerHTML = 'PUBLICATIONS';
+            }
 
             var elements = document.getElementsByClassName('row');
             // Loop through the elements and toggle their visibility
@@ -56,7 +51,7 @@
         <div class="row" id="whatever">
             <div id="profileColumn" class="col s12 l4 center">
                 <img id="profileImage" src="./images/yo.jpeg" class="z-depth-3 circle responsive-img" />
-                <h2 id="heroName" class="center-align">Your Name</h2>
+                <h2 id="heroName" class="center-align">Armando Collado Villaverde</h2>
                 <h4 id="description" class="center-align">Researcher at University of Alcalá</h4>
 
                 <div id="socialLinkSection">
@@ -66,14 +61,15 @@
                         </div>
                     </section>
                 </div>
-                <button id="TogglePublications" class="waves-effect waves-grey btn-flat center-align"
-                    onclick="toggleSection()" style="display: block;">
-                    PUBLICATIONS
-                </button>
-                <button id="TogglePortfolio" class="waves-effect waves-grey btn-flat center-align"
-                    onclick="toggleSection()" style="display: none;">
+
+                <a id="contactButton" class="waves-effect waves-grey btn-flat"
+                    onclick="toggleSection()"><p>PUBLICATIONS</p></a>
+
+                <!-- <a id="contactButton" class="waves-effect waves-grey btn-flat" onclick="toggleSection()"><p>PORTFOLIO</p></a> -->
+                <!-- 
+                <button id="contactButton" class="waves-effect waves-grey btn-flat" onclick="toggleSection()" style="display: none;">
                     PORTFOLIO
-                </button>
+                </button> -->
             </div>
 
 
