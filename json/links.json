@@ -1,32 +1,26 @@
 [
     {
-        "name": "Link",
-        "color": "red",
-        "icon": "web",
-        "url": "https://google.com"
-	},
+        "name": "Twitter",
+        "color": "transparent",
+        "icon": "twitter",
+        "url": "https://twitter.com/Arman_redx"
+    },
     {
-        "name": "Link",
-        "color": "red",
-        "icon": "web",
-        "url": "https://google.com"
-	},
+        "name": "GitHub",
+        "color": "transparent",
+        "icon": "github",
+        "url": "https://github.com/Redxgit"
+    },
     {
-        "name": "Link",
-        "color": "red",
-        "icon": "web",
-        "url": "https://google.com"
-	},
-    {
-        "name": "Link",
-        "color": "red",
-        "icon": "web",
-        "url": "https://google.com"
-	},
+        "name": "Email",
+        "color": "transparent",
+        "icon": "email",
+        "url": "mailto:armando.collado@uah.es"
+    },
     {
         "name": "Linkedin",
-        "color": "blue",
-        "icon": "Linkedin",
+        "color": "transparent",
+        "icon": "linkedin",
         "url": "https://www.linkedin.com/in/armando-collado"
     }
 ]

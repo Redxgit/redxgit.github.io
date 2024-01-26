@@ -17,6 +17,24 @@
     <!-- If you want Google Analytics, do some Google searching, and pop it here. -->
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+        function toggleSection() {
+            var elements = document.getElementById('visibility');
+
+            // Loop through the elements and toggle their visibility
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                if (element.style.display === 'none') {
+                    // If the element is hidden or display property is not set, make it visible
+                    element.style.display = 'block'; // You can change 'block' to any other display value as needed
+                } else {
+                    // If the element is visible, none it
+                    element.style.display = 'none';
+                }
+            }
+        } 
+    </script>
 </head>
 
 <body style="background-color: #f5f6fa">
@@ -35,15 +53,12 @@
                         </div>
                     </section>
                 </div>
-
-                <!-- Replace the email address below with your own -->
-                <a id="contactButton" class="waves-effect waves-grey btn-flat" href="mailto:armando.collado@uah.es">
-                    <p>Contact Me</p>
+                <a id="Toggle things" class="waves-effect waves-grey btn-flat" onclick="toggleSection()">
+                    <p>Publications</p>
                 </a>
-
             </div>
 
-            <div id="portfolioColumn" class="col s12 m12 l8">
+            <div id="portfolioColumn" class="col s12 m12 l8" id="visibility" style="display: block;">
 
                 <div id="portfolioTitle">
                     <p id="portfolioText">Portfolio</p>
@@ -55,8 +70,13 @@
                     <!-- Your work cards are dynamically generated from items.json! -->
                 </div>
 
-                <!-- This is the bibliography stuff -->
-                <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/Redxgit/redxgit.github.io/main/_bibliography/redx.bib&jsonp=1"></script>
+
+
+            </div>
+            <!-- This is the bibliography stuff -->
+            <div id="visibility" style="display: none;">
+                <script
+                    src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/Redxgit/redxgit.github.io/main/_bibliography/redx.bib&jsonp=1"></script>
             </div>
         </div>
     </div>
