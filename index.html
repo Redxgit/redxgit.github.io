@@ -20,7 +20,7 @@
 
     <script>
         function toggleSection() {
-            const toggleButton = document.getElementById('contactButton').getElementsByTagName('p')[0];
+            var toggleButton = document.getElementById('contactButton').getElementsByTagName('p')[0];
             // Loop through the elements and toggle their visibility
             if (toggleButton.innerHTML.includes('PUBLICATIONS')) {
                 toggleButton.innerHTML = 'PORTFOLIO';
