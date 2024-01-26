@@ -20,8 +20,7 @@
 
     <script>
         function toggleSection() {
-            var elements = document.getElementById('visibility');
-
+            var elements = document.getElementsByClassName('waves-effect waves-grey btn-flat');
             // Loop through the elements and toggle their visibility
             for (var i = 0; i < elements.length; i++) {
                 var element = elements[i];
@@ -32,17 +31,31 @@
                     // If the element is visible, none it
                     element.style.display = 'none';
                 }
-            }
+            };
+
+            var elements = document.getElementsByClassName('row');
+            // Loop through the elements and toggle their visibility
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                if (element.id.includes('Container')) {
+                    if (element.style.display === 'none') {
+                        // If the element is hidden or display property is not set, make it visible
+                        element.style.display = 'block'; // You can change 'block' to any other display value as needed
+                    } else {
+                        // If the element is visible, none it
+                        element.style.display = 'none';
+                    }
+                }
+            };
         } 
     </script>
 </head>
 
 <body style="background-color: #f5f6fa">
     <div>
-        <div class="row">
+        <div class="row" id="whatever">
             <div id="profileColumn" class="col s12 l4 center">
                 <img id="profileImage" src="./images/yo.jpeg" class="z-depth-3 circle responsive-img" />
-
                 <h2 id="heroName" class="center-align">Your Name</h2>
                 <h4 id="description" class="center-align">Researcher at University of Alcalá</h4>
 
@@ -53,30 +66,29 @@
                         </div>
                     </section>
                 </div>
-                <a id="Toggle things" class="waves-effect waves-grey btn-flat" onclick="toggleSection()">
-                    <p>Publications</p>
-                </a>
+                <button id="TogglePublications" class="waves-effect waves-grey btn-flat center-align"
+                    onclick="toggleSection()" style="display: block;">
+                    PUBLICATIONS
+                </button>
+                <button id="TogglePortfolio" class="waves-effect waves-grey btn-flat center-align"
+                    onclick="toggleSection()" style="display: none;">
+                    PORTFOLIO
+                </button>
             </div>
+
 
             <div id="portfolioColumn" class="col s12 m12 l8" id="visibility" style="display: block;">
 
-                <div id="portfolioTitle">
-                    <p id="portfolioText">Portfolio</p>
-                    <!-- Type of work goes here -->
-                    <p id="firstCategoryText">My Work</p>
-                </div>
-
-                <div class="row" id="portfolioItemContainer">
+                <div class="row" id="portfolioItemContainer" style="display: block;">
                     <!-- Your work cards are dynamically generated from items.json! -->
                 </div>
 
+                <!-- This is the bibliography stuff -->
+                <div id="biblioItemContainer" style="display: none;" class="row">
+                    <script
+                        src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/Redxgit/redxgit.github.io/main/_bibliography/redx.bib&jsonp=1"></script>
+                </div>
 
-
-            </div>
-            <!-- This is the bibliography stuff -->
-            <div id="visibility" style="display: none;">
-                <script
-                    src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/Redxgit/redxgit.github.io/main/_bibliography/redx.bib&jsonp=1"></script>
             </div>
         </div>
     </div>

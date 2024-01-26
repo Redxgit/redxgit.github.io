@@ -1,11 +1,5 @@
 [
     {
-        "name": "Twitter",
-        "color": "transparent",
-        "icon": "twitter",
-        "url": "https://twitter.com/Arman_redx"
-    },
-    {
         "name": "GitHub",
         "color": "transparent",
         "icon": "github",
