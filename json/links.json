@@ -1,19 +1,19 @@
 [
     {
         "name": "GitHub",
-        "color": "transparent",
+        "color": "black",
         "icon": "github",
         "url": "https://github.com/Redxgit"
     },
     {
         "name": "Email",
         "color": "transparent",
-        "icon": "email",
+        "icon": "black",
         "url": "mailto:armando.collado@uah.es"
     },
     {
         "name": "Linkedin",
-        "color": "transparent",
+        "color": "blue",
         "icon": "linkedin",
         "url": "https://www.linkedin.com/in/armando-collado"
     }
