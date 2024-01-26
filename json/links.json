@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Link",
+        "color": "red",
+        "icon": "web",
+        "url": "https://google.com"
+	},
+    {
+        "name": "Link",
+        "color": "red",
+        "icon": "web",
+        "url": "https://google.com"
+	},
+    {
+        "name": "Link",
+        "color": "red",
+        "icon": "web",
+        "url": "https://google.com"
+	},
+    {
+        "name": "Link",
+        "color": "red",
+        "icon": "web",
+        "url": "https://google.com"
+	},
+    {
+        "name": "Linkedin",
+        "color": "blue",
+        "icon": "Linkedin",
+        "url": "https://www.linkedin.com/in/armando-collado"
+    }
+]
