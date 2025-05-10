@@ -4,94 +4,149 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Armando Collado</title>
-    <meta name="keywords" content="Machine Learning, Space Weather, Geomagnetic Indices, Time series forecasting">
-    <meta name="description" content="I am a Researcher at the University of Alcalá, for now">
+    <meta name="keywords" content="Armando Collado, Machine Learning, Space Weather, Geomagnetic Indices, Time series forecasting">
+    <meta name="description" content="Armando Collado Villaverde personal website">
     <meta name="author" content="Armando Collado Villaverde">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
-    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-    <!-- Put your favicon here! (I highly suggest realfavicongenerator.net) -->
-    <meta name="theme-color" content="#872e4e">
+    <link type="text/css" rel="stylesheet" href="css/materialdesignicons.min.css" media="all" />
+    <meta name="theme-color" content="#f5f6fa">
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:500,600,700" rel="stylesheet">
-    <!-- If you want Google Analytics, do some Google searching, and pop it here. -->
-    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <script>
-        function toggleSection() {
-            var toggleButton = document.getElementById('contactButton').getElementsByTagName('p')[0];
-            // Loop through the elements and toggle their visibility
-            if (toggleButton.innerHTML.includes('PUBLICATIONS')) {
-                toggleButton.innerHTML = 'PORTFOLIO';
-            } else {
-                toggleButton.innerHTML = 'PUBLICATIONS';
-            }
-
-            var elements = document.getElementsByClassName('row');
-            // Loop through the elements and toggle their visibility
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                if (element.id.includes('Container')) {
-                    if (element.style.display === 'none') {
-                        // If the element is hidden or display property is not set, make it visible
-                        element.style.display = 'block'; // You can change 'block' to any other display value as needed
-                    } else {
-                        // If the element is visible, none it
-                        element.style.display = 'none';
-                    }
-                }
-            };
-        } 
-    </script>
 </head>
 
-<body style="background-color: #1b1b1b">
-    <div>
-        <div class="row" id="whatever">
-            <div id="profileColumn" class="col s12 l4 center">
-                <img id="profileImage" src="./images/yo.jpeg" class="z-depth-3 circle responsive-img" />
-                <h2 id="heroName" class="center-align">Armando Collado Villaverde</h2>
-                <h4 id="description" class="center-align">Researcher at University of Alcalá</h4>
+<body style="background-color: #f5f6fa">
 
-                <div id="socialLinkSection">
-                    <section class="tab">
-                        <div id="socialLinkContent">
-                            <!-- Your social links are dynamically generated from links.json! -->
-                        </div>
-                    </section>
-                </div>
+<div class="row">
 
-                <a id="contactButton" class="waves-effect waves-grey btn-flat"
-                    onclick="toggleSection()"><p>PUBLICATIONS</p></a>
+<div id="profileColumn" class="col s12 l4 center">
+	<img id="profileImage" src="images/yo.jpeg" class="z-depth-3 circle responsive-img" />
+	
+	<h2 id="heroName" class="center-align">Armando Collado Villaverde</h2>
+	<h4 id="description" class="center-align">PhD Student at University of Alcalá</h4>
+	<!--<h4 id="description" class="center-align"><a href="LINK">Subtitle</a></h4>-->
 
-                <!-- <a id="contactButton" class="waves-effect waves-grey btn-flat" onclick="toggleSection()"><p>PORTFOLIO</p></a> -->
-                <!-- 
-                <button id="contactButton" class="waves-effect waves-grey btn-flat" onclick="toggleSection()" style="display: none;">
-                    PORTFOLIO
-                </button> -->
-            </div>
+	<div id="socialLinkSection">
+	<section class="tab">
+	<div id="socialLinkContent">
+		<div class="links waves-effect">
+			<a href="https://www.linkedin.com/in/armando-collado/" class="black-text valign-wrapper" target="_blank"><i class="link_icon mdi mdi-linkedin" style="color: blue"></i>&nbsp; LinkedIn</a>
+		</div>
+		<div class="links waves-effect">
+			<a href="https://github.com/Redxgit" class="black-text valign-wrapper" target="_blank"><i class="link_icon mdi mdi-github-box" style="color: black"></i>&nbsp; GitHub</a>
+		</div>
+		<div class="links waves-effect">
+			<a href="mailto:armando.collado-AT-uah.es" class="black-text valign-wrapper" target="_blank"><i class="link_icon mdi mdi-email" style="color: black"></i>&nbsp; Email</a>
+		</div>
+	</div>
+	</section>
+	</div>
+	
+	<a id="contactButton" class="waves-effect waves-grey btn-flat" onclick="showContainer('portfolio')"><p>Info & Projects</p></a>
+	<br>
+	<a id="contactButton" class="waves-effect waves-grey btn-flat" onclick="showContainer('publications')"><p>Publications</p></a>
+	<br>
+	<!--<a id="contactButton" class="waves-effect waves-grey btn-flat" onclick="showContainer('teaching')"><p>Teaching (in spanish)</p></a>-->
+	
+</div>
+	
+<div id="portfolioColumn" class="col s12 m12 l8">
+	<div class="row" id="portfolioItemContainer" style="display:block">
 
+	<div class="col s12 m6 l6"><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light">
+	<img class="activator" src="images/auroras_smol.png">
+	</div>
+	<div class="card-content">
+	<span class="card-title activator grey-text text-darken-4">Bio &amp; current situation<i class="material-icons right">keyboard_arrow_up</i></span>
+	<p><i class="link_icon mdi mdi-" style="color: black"></i><a href="https://redxgit.github.io/" target="_blank">&nbsp;&nbsp;</a></p>
+	</div>
+	<div class="card-reveal"><span class="card-title grey-text text-darken-4">Bio &amp; current situation<i class="material-icons right">close</i></span>
+	<p></p>
+	<p>
+		<i>"There's no "typical" path in research — and that's where the strength lies."</i>
+		Hi! I'm Armando Collado, a PhD student at the University of Alcalá, where I develop deep learning models to forecast geomagnetic indices like SYM-H in real time. My journey started in computer engineering, followed by work in game development, wearable tech, and predictive maintenance; all before shifting my focus to space weather.
+		My current research, funded by ESA's Open Space Innovation Platform, blends machine learning, time series forecasting, and operational deployment, aiming to better understand and predict geomagnetic storms. I've also worked with classical computer vision and maintain a broad skill set across AI, software engineering, and data science.
+		Photo taken by me during the geomagnetic storm of May 2024 in Griesheim, Germany.
 
-            <div id="portfolioColumn" class="col s12 m12 l8" id="visibility" style="display: block;">
-
-                <div class="row" id="portfolioItemContainer" style="display: block;">
-                    <!-- Your work cards are dynamically generated from items.json! -->
-                </div>
-
-                <!-- This is the bibliography stuff -->
-                <div id="biblioItemContainer" style="display: none;" class="row">
-                    <script
-                        src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/Redxgit/redxgit.github.io/main/_bibliography/redx.bib&jsonp=1"></script>
-                </div>
-
-            </div>
+	</p>
+	<p><b>Currently</b> I am PhD Student at the University of Alcalá, enrolled in the Space Research and Astrobiology program.</p>
+	<p></p>
+	</div>
+	</div></div>
+	
+	<div class="col s12 m6 l6"><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light">
+	<img class="activator" src="images/mch.jpg">
+	</div>
+	<div class="card-content"><span class="card-title activator grey-text text-darken-4">Brief skills &amp; CV<i class="material-icons right">keyboard_arrow_up</i></span>
+	<p><i class="link_icon mdi mdi-file-pdf" style="color: red"></i><a href="assets/CV-Armando_Collado.pdf" target="_blank">&nbsp;Download CV (pdf)</a></p>
+	</div>
+	<div class="card-reveal"><span class="card-title grey-text text-darken-4">Brief skills &amp; CV<i class="material-icons right">close</i></span>
+	<p><i>The future is always blank. Only your willpower can leave footsteps there.</i></p><p>I see research problems as design challenges. My strength lies in building data-driven solutions that are robust, accurate, and ready for operational use. My background in computer engineering and AI allows me to work fluidly across software systems, time series forecasting, and model deployment.</p> <p>I've developed several real-time geomagnetic forecasting models using deep learning, from architecture design to production deployment. My PhD, funded by ESA's Open Space Innovation Platform, focused on operational Space Weather forecasting and has resulted in multiple peer-reviewed publications.</p> <p>I've collaborated across research and industry: working with the Spanish Navy on predictive maintenance, developing a computer vision system for industrial quality control, and releasing a PlayStation 4 game as a Unity developer. I am also experienced in presenting at international conferences and collaborating with interdisciplinary teams.</p>
+	</div></div></div>
+	
+	<div class="col s12 m6 l6"><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light">
+	<img class="activator" src="images/mlsw.jpg">
+	</div>
+	<div class="card-content"><span class="card-title activator grey-text text-darken-4">Geomagnetic indices forecasting using ML<i class="material-icons right">keyboard_arrow_up</i></span>
+	<p><i class="link_icon mdi mdi-file-pdf" style="color: red"></i><a href="https://doi.org/10.1029/2024SW004039" target="_blank">&nbsp;Last paper on Space Weather Journal</a></p>
+	</div>
+	<div class="card-reveal"><span class="card-title grey-text text-darken-4">Geomagnetic indices forecasting using ML<i class="material-icons right">close</i></span>
+	<p></p>
+	<p>Machine Learning applications are conquering new areas taking advantage of the availability of large amounts of data. Considering space probes such as ACE that are providing information about the solar wind at the L1 point for more than 25 years, it is feasible that Machine Learning approaches can be applied to the space weather context. We are working toward Deep Neural Networks models to forecast SYM-H and ASY-H indices (that quantify the disturbance of the Earth's magnetosphere) for the next 1 and 2 hours. The goal of the work is to drive an operational geomagnetic indices forecasting system that can minimize the damages caused by geomagnetic storms, providing an alert ahead enough to take containment measures. The operative models will be available at the <a href="http://www.senmes.es">Spanish Space Weather Service</a>.</p>
+	<p>A first model for <a href="https://doi.org/10.1029/2021SW002748">forecasting SYM-H and ASY-H</a> is published at Space Weather</p><p>Last model for <a href="https://doi.org/10.1029/2024SW004039">forecasting SYM-H with confidence interval</a> is published at Space Weather and available at <a href="https://www.senmes.es/pub/ISG/lastSYMforUAHinterval.png">SeNMEs</a>.</p>
+	<p></p>
+	</div></div></div>
+	
+	<div class="col s12 m6 l6"><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light">
+	<img class="activator" src="images/profine.png">
+	</div>
+	<div class="card-content"><span class="card-title activator grey-text text-darken-4">Quality control in PVC extrusion<i class="material-icons right">keyboard_arrow_up</i></span>
+	<p><i class="link_icon mdi mdi-youtube-play" style="color: red"></i><a href="https://youtube.com/shorts/7A_yCFqiL0E?feature=share" target="_blank">&nbsp;Development video</a></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4">Quality control in PVC extrusion<i class="material-icons right">close</i></span>
+	<p></p>
+	<p>We developed a prototype quality control module for PVC extrusion lines. The prototype was developed in less than 6 months using computer vision algorithms to detect faults on both visible faces of PVC frames. It was designed to be easily incorporated into a production line during operation, avoiding production stoppages. It was supported and tested by <a href="https://www.kommerling.es/">Profine Iberia S.A.</a></p>
+	<p></p>
+	
+	<p></p>
+	</div></div></div>
+	
+	<div class="col s12 m6 l6"><div class="card hoverable"><div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="images/massira.jpg">
         </div>
-    </div>
+        <div class="card-content"><span class="card-title activator grey-text text-darken-4">Massira, PS4 & PC Videogame<i class="material-icons right">keyboard_arrow_up</i></span>
+        <p><i class="link_icon mdi mdi-youtube-play" style="color: red"></i><a href="https://www.youtube.com/watch?v=aKzRQBmD1tI" target="_blank">&nbsp;Official Trailer</a></p>
+        </div>
+        <div class="card-reveal"><span class="card-title grey-text text-darken-4">Massira, PS4 & PC Videogame<i class="material-icons right">close</i></span><p></p>
+        <p>We developed a prototype quality control module for PVC extrusion lines. The prototype was developed in less than 6 months using computer vision algorithms to detect faults on both visible faces of PVC frames. It was designed to be easily incorporated into a production line during operation, avoiding production stoppages. It was supported and tested by </p>
+        <p></p>
+        </div></div></div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    </div>
+	
+	<div class="row" id="publicationsItemContainer" style="display:none">
+	<script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/Redxgit/redxgit.github.io/main/_bibliography/redx.bib&jsonp=1"></script> 
+	</div>
+	
+	
+
+</div>
+
+<script>
+function showContainer(id)
+{
+	sf = "ItemContainer";
+	rows = document.getElementsByClassName("row");
+	for(i=0; i<rows.length; i++)
+		if(rows[i].id.indexOf(sf) > 0)
+			if(rows[i].id == id+sf)
+				rows[i].style.display = "block";
+			else
+				rows[i].style.display = "none";
+}
+</script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
 </body>
 
 </html>
